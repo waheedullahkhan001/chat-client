@@ -26,6 +26,8 @@ def recv_loop(sock: socket.socket):
     """Receive text from server."""
     while True:
         text = receive_text(sock)
+        if text == 'ping':
+            continue
         print(text)
 
 def main():
