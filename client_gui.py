@@ -63,24 +63,6 @@ class ChatApp(QWidget):
     def show_error(self, message: str):
         self.messages.append(f" * Error: {message}")
 
-    def client_loop(self):
-        # Connect to the server
-        self.connect_to_server()
-
-        # Start the client loop
-        while True:
-            # Get the message from the server
-            message = self.receive_message()
-
-            # Add the message to the display box
-            self.messages.append(message)
-
-    def connect_to_server(self):
-        pass
-
-    def receive_message(self):
-        pass
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
